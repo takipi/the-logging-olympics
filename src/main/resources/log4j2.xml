@@ -2,7 +2,7 @@
 <Configuration status="WARN">
 	<Appenders>
 		<File name="FILE" fileName="logs/test.log">
-			<PatternLayout><pattern>%d [%t] %p %C - %m%n</pattern></PatternLayout>
+			<PatternLayout><pattern>%d [%t] %p %c - %m%n</pattern></PatternLayout>
 		</File>
 	</Appenders>
 	<Loggers>
