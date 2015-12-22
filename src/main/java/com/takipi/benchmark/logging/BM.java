@@ -8,17 +8,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.PrintWriter;
-import java.util.Arrays;
-import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 import com.takipi.benchmark.logging.tests.BaseTest;
-import com.takipi.benchmark.logging.tests.DebugTest;
-import com.takipi.benchmark.logging.tests.HelloWorldTest;
-import com.takipi.benchmark.logging.tests.ThrowableTest;
-import com.takipi.benchmark.logging.tests.ToStringTest;
 
 public class BM
 {
@@ -29,11 +23,12 @@ public class BM
 	static String logFile = "test.log";
 	static String testNamePrefix = "com.takipi.benchmark.logging.tests.";
 	
+	@SuppressWarnings("unchecked")
 	public static void main(String[] args)
 	{	
 		if (args.length < 3)
 		{
-			System.out.println("Not enough arguments. Please supply [logger name] [test name (= HelloWorldTest|ToStringTest|DebugTest|ThrowableTest|TimeThreadTest)] [test id]");
+			System.out.println("Not enough arguments. Please supply [logger name] [test name (= HelloWorldTest|ToStringTest|DebugTest|ThrowableTest|TimeThreadTest|HelloWorldAspectTest)] [test id]");
 			System.exit(0);
 		}
 	
